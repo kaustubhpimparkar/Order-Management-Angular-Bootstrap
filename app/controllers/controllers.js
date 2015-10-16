@@ -1,23 +1,7 @@
-﻿/*#######################################################################
-  
-  Dan Wahlin
-  http://twitter.com/DanWahlin
-  http://weblogs.asp.net/dwahlin
-  http://pluralsight.com/training/Authors/Details/dan-wahlin
-
-  Normally like the break AngularJS controllers into separate files.
-  Kept them together here since they're small and it's easier to look through them.
-  example. 
-
-  #######################################################################*/
-
-
-//This controller retrieves data from the customersService and associates it with the $scope
+﻿//This controller retrieves data from the customersService and associates it with the $scope
 //The $scope is ultimately bound to the customers view
 app.controller('CustomersController', function ($scope, customersService) {
 
-    //I like to have an init() for controllers that need to perform some initialization. Keeps things in
-    //one place...not required though especially in the simple example below
     init();
 
     function init() {
@@ -45,8 +29,6 @@ app.controller('CustomerOrdersController', function ($scope, $routeParams, custo
     $scope.customer = {};
     $scope.ordersTotal = 0.00;
 
-    //I like to have an init() for controllers that need to perform some initialization. Keeps things in
-    //one place...not required though especially in the simple example below
     init();
 
     function init() {
@@ -64,8 +46,6 @@ app.controller('CustomerOrdersController', function ($scope, $routeParams, custo
 app.controller('OrdersController', function ($scope, customersService) {
     $scope.customers = [];
 
-    //I like to have an init() for controllers that need to perform some initialization. Keeps things in
-    //one place...not required though especially in the simple example below
     init();
 
     function init() {
